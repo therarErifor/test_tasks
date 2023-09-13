@@ -1,4 +1,4 @@
-import 'package:hotel/src/features/room/room_entities/room.dart';
+import '../../repositories/rooms_repository/room_entities/room.dart';
 
 abstract class RoomsState{}
 

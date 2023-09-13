@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../repositories/hotel_repository/hotel_repository.dart';
-import 'hotel_entities/hotel_data.dart';
+import '../../repositories/hotel_repository/hotel_entities/hotel_data.dart';
 import 'hotel_state.dart';
 
 class HotelCubit extends Cubit<HotelState>{
@@ -11,11 +11,6 @@ class HotelCubit extends Cubit<HotelState>{
       _hotelRepository = hotelRepository,
       super(HotelInitState()){
     init();
-  }
-
-  void slideImage(int currentId) {
-      _hotelData.imageId = currentId;
-      emit(HotelDataLoadedState(hotelData: _hotelData));
   }
 
   void init() async {

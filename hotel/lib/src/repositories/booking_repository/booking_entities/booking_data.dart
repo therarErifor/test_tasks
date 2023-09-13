@@ -1,3 +1,5 @@
+import 'package:hotel/src/repositories/booking_repository/booking_entities/tourist_data.dart';
+
 class BookingData {
   final int id;
   final String hotelName;
@@ -14,6 +16,9 @@ class BookingData {
   final int tourPrice;
   final int fuelCharge;
   final int serviceCharge;
+  late String phone = '';
+  late String email = '';
+  late List<TouristData> touristList;
 
   BookingData(
       {required this.id,

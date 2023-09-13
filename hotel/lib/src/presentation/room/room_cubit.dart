@@ -1,9 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotel/src/features/room/room_entities/room.dart';
-import 'package:hotel/src/features/room/room_state.dart';
-
-import '../../repositories/rooms_repository/hotel_repository.dart';
-
+import 'package:hotel/src/presentation/room/room_state.dart';
+import '../../repositories/rooms_repository/rooms_repository.dart';
+import '../../repositories/rooms_repository/room_entities/room.dart';
 
 class RoomsCubit extends Cubit<RoomsState>{
   final RoomsRepository _roomsRepository;
@@ -12,11 +10,6 @@ class RoomsCubit extends Cubit<RoomsState>{
       _roomsRepository = roomsRepository,
       super(RoomsInitState()){
     init();
-  }
-
-  void slideImage(int roomId, int imageId) {
-      _roomsListLoaded[roomId].imageId = imageId;
-      emit(RoomsListLoadedState(roomsList: _roomsListLoaded));
   }
 
   void init() async {

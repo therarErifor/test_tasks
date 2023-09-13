@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/hotel/hotel_page.dart';
+import 'package:hotel/src/presentation/hotel/hotel_page.dart';
 
 class HotelApp extends StatelessWidget{
   const HotelApp({super.key});

@@ -1,5 +1,5 @@
-import '../../features/hotel/hotel_entities/about_the_hotel.dart';
-import '../../features/hotel/hotel_entities/hotel_data.dart';
+import '../../repositories/hotel_repository/hotel_entities/about_the_hotel.dart';
+import '../../repositories/hotel_repository/hotel_entities/hotel_data.dart';
 import '../repository_entities/resp.dart';
 import 'hotel_data_source/hotel_remote_data_source.dart';
 import 'hotel_repository.dart';

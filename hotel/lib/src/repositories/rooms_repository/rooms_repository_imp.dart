@@ -1,9 +1,8 @@
+import 'package:hotel/src/repositories/rooms_repository/room_entities/rooms_list.dart';
 import 'package:hotel/src/repositories/rooms_repository/rooms_data_source/rooms_remote_data_source.dart';
-
-import '../../features/room/room_entities/room.dart';
-import '../../features/room/room_entities/rooms_list.dart';
+import '../../repositories/rooms_repository/room_entities/room.dart';
 import '../repository_entities/resp.dart';
-import 'hotel_repository.dart';
+import 'rooms_repository.dart';
 
 class RoomsRepositoryImp extends RoomsRepository{
   final RoomsRemoteDataSource _roomsRemoteDataSource = RoomsRemoteDataSource();
@@ -13,7 +12,7 @@ class RoomsRepositoryImp extends RoomsRepository{
     final resp = await _roomsRemoteDataSource.getRoomListDtoAsync();
     final dto = resp.data;
 
-    if((resp.isSuccessTheResp == true)&&(dto != null)){
+    if ((resp.isSuccessTheResp == true) && (dto != null)) {
       var rooms = dto.rooms.map((dto)=>
       Room(
         id: dto.id,

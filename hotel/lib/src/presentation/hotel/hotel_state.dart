@@ -1,4 +1,4 @@
-import 'package:hotel/src/features/hotel/hotel_entities/hotel_data.dart';
+import '../../repositories/hotel_repository/hotel_entities/hotel_data.dart';
 
 abstract class HotelState{}
 
