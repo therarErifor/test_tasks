@@ -1,16 +1,11 @@
 # facts_and_achievements_in_sports
 
-just a new flutter progect
+Скриншоты приложения:
 
-## Getting Started
+Главный экран:
 
-This project is a starting point for a Flutter application.
+![Screenshot_20230914-164518_facts_and_achievements_in_sports](https://github.com/therarErifor/test_tasks/assets/46041526/de53cd89-f170-4557-9717-5498f6aa43fa)
 
-A few resources to get you started if this is your first Flutter project:
+Внутренний экран:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_20230914-164542_facts_and_achievements_in_sports](https://github.com/therarErifor/test_tasks/assets/46041526/451920b1-e4cc-4f55-a7ba-a18be9e1b32b)
