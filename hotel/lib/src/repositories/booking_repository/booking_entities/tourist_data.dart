@@ -1,5 +1,5 @@
 class TouristData {
-  late int numberOfTourist;
+  int numberOfTourist;
   String name;
   String surname;
   String birthDate;

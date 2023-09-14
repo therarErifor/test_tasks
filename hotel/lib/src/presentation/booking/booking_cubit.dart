@@ -27,6 +27,8 @@ class BookingCubit extends Cubit<BookingState>{
     _initContainerColors();
     var response = await _bookingRepository.getBookingDataAsync();
     if (response.data != null){
+      _bookingData.email = '';
+      _bookingData.phone = '';
       _bookingData = response.data!;
       _bookingData.touristList = [];
       emit(BookingDataLoadedState(bookingData: _bookingData, containerColors: _containerColors));

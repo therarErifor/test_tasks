@@ -80,7 +80,6 @@ class RoomPage extends StatelessWidget {
   }
 
   Widget _buildRoomsTable(BuildContext context, List<Room> roomsList) {
-    final CarouselController carouselController = CarouselController();
     List<TableRow> rows = [];
     for (int roomId = 0; roomId < roomsList.length; roomId++) {
       rows.add(
@@ -164,10 +163,9 @@ class RoomPage extends StatelessWidget {
     };
 
     return SingleChildScrollView(
-        child: Column(children: [
-      Table(
+        child: Table(
           defaultVerticalAlignment: TableCellVerticalAlignment.top,
           children: rows),
-    ]));
+    );
   }
 }
