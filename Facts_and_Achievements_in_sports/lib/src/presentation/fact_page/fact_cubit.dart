@@ -1,22 +1,22 @@
-import 'package:facts_and_achievements_in_sports/src/presentation/plug_page/plug_state.dart';
+import 'package:facts_and_achievements_in_sports/src/presentation/fact_page/fact_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../repositories/fact_repository/fact_entities/fact_data.dart';
 import '../../repositories/fact_repository/fact_repository.dart';
 
-class PlugCubit extends Cubit<PlugState>{
+class FactCubit extends Cubit<FactState>{
   final FactRepository _factRepository;
   late List<FactData> _factsList;
 
-  PlugCubit(FactRepository factRepository) :
+  FactCubit(FactRepository factRepository) :
         _factRepository = factRepository,
-        super(PlugInitState()){
+        super(FactInitState()){
     init();
   }
 
   void init() async {
     var response = await _factRepository.getFactDataAsync();
     _factsList = response.factsList;
-      emit(PlugLoadedState(factsList: _factsList));
+      emit(FactLoadedState(factsList: _factsList));
   }
 }

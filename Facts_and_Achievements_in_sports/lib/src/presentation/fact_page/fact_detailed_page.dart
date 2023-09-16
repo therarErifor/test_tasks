@@ -12,17 +12,17 @@ class FactDetailedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context, ) {
     return Scaffold(
-        backgroundColor: Color.fromRGBO(246, 246, 249, 1),
+        backgroundColor: Colors.black,
         appBar: AppBar(
           elevation: 0,
           centerTitle: true,
           title: Text(_factData.title),
         ),
-        body: Container(
+        body: SingleChildScrollView( child: Container(
           margin: EdgeInsets.symmetric(vertical: 10),
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
-              color: Colors.white,
+              color: Color.fromRGBO(28, 28, 28, 1),
               borderRadius: BorderRadius.all(Radius.circular(12))
           ),
           child: Column(
@@ -37,7 +37,8 @@ class FactDetailedPage extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(_factData.content, style: TextStyle(
-                 fontSize: 18
+                 fontSize: 18,
+                  color: Colors.white,
                 )),
                 SizedBox(height: 10),
                 Wrap(
@@ -51,13 +52,13 @@ class FactDetailedPage extends StatelessWidget {
                         padding: EdgeInsets.symmetric(
                             vertical: 5, horizontal: 10),
                         decoration: const BoxDecoration(
-                            color: Color.fromRGBO(251, 251, 252, 1),
+                            color: Color.fromRGBO(50, 80, 128, 1),
                             borderRadius:
                             BorderRadius.all(Radius.circular(5))),
                         child: Text(
                           '$item',
                           style: const TextStyle(
-                              color: Color.fromRGBO(130, 135, 160, 1),
+                              color: Colors.white70,
                               fontSize: 15,
                               fontWeight: FontWeight.w500),
                         ),
@@ -68,7 +69,7 @@ class FactDetailedPage extends StatelessWidget {
               ]
           ),
         )
-      );
+      ));
 
   }
 }
