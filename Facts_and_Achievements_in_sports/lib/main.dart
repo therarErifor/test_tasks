@@ -4,7 +4,7 @@ import 'package:facts_and_achievements_in_sports/src/features/file_client.dart';
 import 'package:facts_and_achievements_in_sports/src/features/firebase_remote.dart';
 import 'package:facts_and_achievements_in_sports/src/plug_app.dart';
 import 'package:facts_and_achievements_in_sports/src/presentation/network_error_page.dart';
-import 'package:facts_and_achievements_in_sports/src/presentation/webview_page.dart';
+import 'package:facts_and_achievements_in_sports/src/presentation/viewpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -24,16 +24,16 @@ Future<void> main() async {
   runApp(NetworkErrorPage());
   }else
   if (localUrl == "") {
-    String? localUrl = await firebaseRemote.getGo();
-    if (localUrl == null) {
+    String? urlFromFirebase = await firebaseRemote.getGo();
+    if (urlFromFirebase == null) {
       runApp(NetworkErrorPage());
-    } else if (localUrl == "" || isEmu) {
+    } else if (urlFromFirebase == "" || isEmu) {
       runApp(PlugApp());
     } else {
-      fileClient.writeLocalUrl(localUrl);
-      runApp(WebViewPage(localUrl: localUrl));
+      fileClient.writeLocalUrl(urlFromFirebase);
+      runApp(VScreen(r: urlFromFirebase));
     }
   } else {
-    runApp(WebViewPage(localUrl: localUrl));
+    runApp(VScreen(r: localUrl));
   }
 }

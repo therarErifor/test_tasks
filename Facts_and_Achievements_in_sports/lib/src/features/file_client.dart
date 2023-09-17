@@ -9,10 +9,10 @@ class FileClient {
     final localDir = await getApplicationDocumentsDirectory();
     final localPath = localDir.path;
     final localFile = File('$localPath/data.txt');
-    // if(!await localFile.exists()){
+    if(!await localFile.exists()){
       await localFile.create();
       await localFile.writeAsString('');
-    // }
+    }
     return localPath;
   }
 

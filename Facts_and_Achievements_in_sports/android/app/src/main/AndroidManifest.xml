@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.facts_and_achievements_in_sports">
+    package="achievemen.onsem">
      <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:usesCleartextTraffic="true"
-        android:label="facts_and_achievements_in_sports"
+        android:label="Achievements"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

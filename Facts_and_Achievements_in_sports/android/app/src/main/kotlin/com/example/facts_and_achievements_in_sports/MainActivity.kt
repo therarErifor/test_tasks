@@ -1,4 +1,4 @@
-package com.example.facts_and_achievements_in_sports
+package achievemen.onsem
 
 import io.flutter.embedding.android.FlutterActivity
 

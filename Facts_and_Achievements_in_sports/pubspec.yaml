@@ -43,14 +43,20 @@ dependencies:
   build_runner: ^2.3.3
   firebase_core: ^2.15.1
   firebase_remote_config: ^4.2.5
-  webview_flutter: ^4.2.4
   device_info_plus: ^9.0.3
   path_provider: ^2.1.1
   connectivity_plus: ^4.0.2
+  flutter_inappwebview: ^5.7.2+3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+#flutter_launcher_icons:
+#  android: "launcher_icon"
+#  ios: true
+#  image_path: "assets/icon/logo.png"
+#  remove_alpha_ios: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

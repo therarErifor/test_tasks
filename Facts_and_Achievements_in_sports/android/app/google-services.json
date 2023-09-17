@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "526277389800",
-    "project_id": "plugapp-e335e",
-    "storage_bucket": "plugapp-e335e.appspot.com"
+    "project_number": "527073839842",
+    "project_id": "wvwds371",
+    "storage_bucket": "wvwds371.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:526277389800:android:b98188f5a55a1adc89085d",
+        "mobilesdk_app_id": "1:527073839842:android:2972524be1d46e7ec76cbb",
         "android_client_info": {
-          "package_name": "com.example.facts_and_achievements_in_sports"
+          "package_name": "achievemen.onsem"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAD2hNAfUd0e9O45sfXwWKcbYKbi7FQvdQ"
+          "current_key": "AIzaSyClRYE9QMiqWJ6xo2OxcHYUDtc7w96lvkI"
         }
       ],
       "services": {

@@ -19,7 +19,7 @@ class FactDetailedPage extends StatelessWidget {
           title: Text(_factData.title),
         ),
         body: SingleChildScrollView( child: Container(
-          margin: EdgeInsets.symmetric(vertical: 10),
+          margin: EdgeInsets.all(10),
           padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
               color: Color.fromRGBO(28, 28, 28, 1),

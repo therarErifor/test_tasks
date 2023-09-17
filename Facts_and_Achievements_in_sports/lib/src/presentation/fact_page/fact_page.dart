@@ -69,38 +69,40 @@ class FactPage extends StatelessWidget {
         shrinkWrap: true,
         itemCount: _factsList.length,
         itemBuilder: (BuildContext context, int factIndex) {
-          return Card(
+          return Container(
             margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: ListTile(
-              shape: RoundedRectangleBorder(
-                side: BorderSide.none,
-                borderRadius: BorderRadius.circular(5),
+
+                shape: RoundedRectangleBorder(
+                  side: BorderSide.none,
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                tileColor: Color.fromRGBO(28, 28, 28, 1),
+                leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(6),
+                    child: Image.asset(
+                      "assets/images/№${factIndex + 1}.jpg",
+                      height: 60,
+                      width: 60,
+                      fit: BoxFit.cover,
+                    )),
+                title: Text(_factsList[factIndex].title,
+                    style: TextStyle(color: Colors.white)),
+                subtitle: Text(_factsList[factIndex].content,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(color: Colors.white60)),
+                trailing: Icon(Icons.navigate_next_rounded, color: Colors.white),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) =>
+                              FactDetailedPage(_factsList[factIndex])));
+                },
               ),
-              contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
-              tileColor: Color.fromRGBO(28, 28, 28, 1),
-              leading: ClipRRect(
-                  borderRadius: BorderRadius.circular(6),
-                  child: Image.asset(
-                    "assets/images/№${factIndex + 1}.jpg",
-                    height: 60,
-                    width: 60,
-                    fit: BoxFit.cover,
-                  )),
-              title: Text(_factsList[factIndex].title,
-                  style: TextStyle(color: Colors.white)),
-              subtitle: Text(_factsList[factIndex].content,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(color: Colors.white60)),
-              trailing: Icon(Icons.navigate_next_rounded, color: Colors.white),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (_) =>
-                            FactDetailedPage(_factsList[factIndex])));
-              },
-            ),
           );
+
         });
   }
 }
